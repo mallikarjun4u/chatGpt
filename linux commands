@@ -19,7 +19,23 @@ find
 locate
 file
 stat
-```
+```| Command  | Example                  | What it does                                                          |
+| -------- | ------------------------ | --------------------------------------------------------------------- |
+| `pwd`    | `pwd`                    | Shows your current directory                                          |
+| `ls`     | `ls`                     | Lists files and directories                                           |
+| `ls -la` | `ls -la`                 | Lists **all** files with detailed information, including hidden files |
+| `cd`     | `cd Documents`           | Moves into the `Documents` directory                                  |
+| `mkdir`  | `mkdir project`          | Creates a new directory named `project`                               |
+| `rmdir`  | `rmdir project`          | Removes an **empty** directory                                        |
+| `touch`  | `touch file.txt`         | Creates an empty file (or updates its timestamp)                      |
+| `cp`     | `cp file.txt backup.txt` | Copies `file.txt` to `backup.txt`                                     |
+| `mv`     | `mv file.txt Documents/` | Moves `file.txt` into `Documents`                                     |
+| `rm`     | `rm file.txt`            | Deletes `file.txt`                                                    |
+| `find`   | `find . -name "*.txt"`   | Finds `.txt` files starting from the current directory                |
+| `locate` | `locate file.txt`        | Searches for a file by name using the locate database                 |
+| `file`   | `file image.jpg`         | Shows what type of file `image.jpg` is                                |
+| `stat`   | `stat file.txt`          | Shows detailed information about a file                               |
+
 
 ### 2. Reading & editing files
 
