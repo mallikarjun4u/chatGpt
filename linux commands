@@ -1,0 +1,365 @@
+list linux commands for learning devops
+
+Absolutely. If you're learning **DevOps**, don't try to memorize every Linux command. Focus on commands you'll actually use for **servers, files, processes, networking, permissions, logs, automation, and troubleshooting**.
+
+### 1. Basic navigation & files
+
+```bash
+pwd
+ls
+ls -la
+cd
+mkdir
+rmdir
+touch
+cp
+mv
+rm
+find
+locate
+file
+stat
+```
+
+### 2. Reading & editing files
+
+```bash
+cat
+less
+more
+head
+tail
+tail -f
+nano
+vim
+```
+
+**Important for DevOps:**
+
+```bash
+tail -f /var/log/syslog
+```
+
+Useful for watching logs in real time.
+
+### 3. Searching & text processing
+
+```bash
+grep
+grep -r
+awk
+sed
+cut
+sort
+uniq
+wc
+tr
+xargs
+```
+
+Learn these especially well:
+
+```bash
+grep
+awk
+sed
+```
+
+For example:
+
+```bash
+grep "ERROR" app.log
+```
+
+### 4. Permissions & users
+
+```bash
+whoami
+id
+who
+w
+su
+sudo
+useradd
+usermod
+userdel
+passwd
+groups
+chmod
+chown
+chgrp
+umask
+```
+
+You should understand:
+
+```bash
+chmod 755 script.sh
+chown user:group file.txt
+```
+
+### 5. Processes & system resources
+
+```bash
+ps
+top
+htop
+pgrep
+pkill
+kill
+killall
+jobs
+bg
+fg
+nohup
+free
+df
+du
+uptime
+uname
+```
+
+Very important:
+
+```bash
+ps aux
+top
+df -h
+du -sh *
+free -h
+```
+
+### 6. Services & logs
+
+Modern Linux servers commonly use `systemd`:
+
+```bash
+systemctl
+journalctl
+service
+```
+
+Examples:
+
+```bash
+systemctl status nginx
+systemctl restart nginx
+systemctl enable nginx
+journalctl -u nginx
+journalctl -f
+```
+
+### 7. Networking
+
+```bash
+ip
+ss
+ping
+curl
+wget
+ssh
+scp
+rsync
+dig
+nslookup
+traceroute
+hostname
+```
+
+Master these:
+
+```bash
+ip addr
+ip route
+ss -tulpn
+curl
+ssh
+scp
+rsync
+```
+
+### 8. Disk & storage
+
+```bash
+lsblk
+blkid
+mount
+umount
+df
+du
+fdisk
+parted
+```
+
+For day-to-day DevOps:
+
+```bash
+df -h
+du -sh /var/*
+lsblk
+```
+
+### 9. Archives & compression
+
+```bash
+tar
+gzip
+gunzip
+zip
+unzip
+```
+
+Very common:
+
+```bash
+tar -czvf backup.tar.gz /path/to/directory
+tar -xzvf backup.tar.gz
+```
+
+### 10. Package management
+
+**Ubuntu/Debian:**
+
+```bash
+apt
+apt-get
+dpkg
+```
+
+**RHEL/CentOS/Fedora:**
+
+```bash
+dnf
+yum
+rpm
+```
+
+Examples:
+
+```bash
+sudo apt update
+sudo apt install nginx
+sudo apt remove nginx
+```
+
+### 11. Environment & shell
+
+```bash
+env
+printenv
+export
+echo
+which
+whereis
+history
+alias
+source
+```
+
+Learn environment variables:
+
+```bash
+export APP_ENV=production
+echo $APP_ENV
+```
+
+### 12. Bash scripting — very important for DevOps
+
+Learn:
+
+```bash
+#!/bin/bash
+if
+then
+else
+fi
+for
+while
+case
+function
+$?
+$1
+$2
+$@
+$#
+```
+
+And commands commonly used inside scripts:
+
+```bash
+echo
+read
+test
+[ ]
+grep
+awk
+sed
+cut
+curl
+jq
+```
+
+### 13. Git
+
+You'll use Git constantly:
+
+```bash
+git clone
+git init
+git status
+git add
+git commit
+git push
+git pull
+git fetch
+git branch
+git checkout
+git switch
+git merge
+git rebase
+git log
+git diff
+git stash
+```
+
+### 14. DevOps troubleshooting commands
+
+Make these second nature:
+
+```bash
+ps aux
+top
+df -h
+du -sh
+free -h
+uptime
+systemctl status
+journalctl
+ss -tulpn
+ip addr
+ip route
+curl
+ping
+dig
+grep
+tail -f
+```
+
+### Recommended learning order
+
+**Phase 1 — Linux fundamentals**
+`pwd → ls → cd → cp → mv → rm → mkdir → cat → less → grep`
+
+**Phase 2 — Administration**
+`sudo → users → chmod → chown → ps → kill → systemctl → journalctl`
+
+**Phase 3 — Networking**
+`ip → ss → ping → curl → dig → ssh → scp → rsync`
+
+**Phase 4 — Automation**
+`Bash → grep → awk → sed → jq → cron`
+
+**Phase 5 — DevOps tools**
+`Git → Docker → Kubernetes → Terraform → Ansible → CI/CD`
+
+If your goal is a **DevOps job**, I'd prioritize **Linux + Bash + Git + networking + Docker + Kubernetes + Terraform + CI/CD** rather than trying to learn hundreds of Linux commands.
