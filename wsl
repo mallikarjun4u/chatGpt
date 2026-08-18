@@ -1,0 +1,145 @@
+# WSL (Windows Subsystem for Linux) — Capabilities
+
+1. **Run Linux Commands**
+
+   * `ls`
+   * `cd`
+   * `pwd`
+   * `mkdir`
+   * `cp`
+   * `mv`
+   * `rm`
+   * `grep`
+   * `find`
+   * `chmod`
+
+2. **Install Linux Software**
+
+   * Use package managers such as `apt`
+   * Install tools like Git, Python, Nginx, Node.js, etc.
+
+3. **Run Linux Programs**
+
+   * Python applications
+   * Node.js applications
+   * C/C++ programs
+   * Shell scripts
+   * Other Linux applications
+
+4. **Access Windows Files from Linux**
+
+   * Windows `C:` drive → `/mnt/c`
+   * Example:
+
+     ```bash
+     cd /mnt/c
+     ls
+     ```
+
+5. **Access Linux Files from Windows**
+
+   * Windows can access files stored inside your WSL environment.
+
+6. **Run Windows Programs from Linux**
+
+   * Example:
+
+     ```bash
+     notepad.exe
+     ```
+   * WSL can interact with Windows applications.
+
+7. **Run Linux Servers**
+
+   * Nginx
+   * Apache
+   * Python web servers
+   * Node.js servers
+   * SSH
+   * Databases
+
+8. **Development Environment**
+
+   * Git
+   * Python
+   * Node.js
+   * GCC
+   * Java
+   * Shell scripting
+   * Linux development tools
+
+9. **Docker Integration**
+
+   * WSL itself is **not Docker**.
+   * Docker Desktop can integrate with WSL 2.
+   * Common setup:
+
+     ```text
+     Windows
+       ├── WSL 2
+       │    └── Ubuntu
+       │
+       └── Docker Desktop
+            └── Linux Containers
+     ```
+
+10. **Linux Kernel**
+
+    * WSL 2 uses a real Linux kernel.
+    * It runs Linux in a lightweight virtualized environment.
+
+11. **Multiple Linux Distributions**
+
+    * You can install different distributions, such as:
+
+      * Ubuntu
+      * Debian
+      * Kali Linux
+      * Other supported distributions
+
+12. **Linux Networking**
+
+    * Run network services
+    * Test ports
+    * Use tools such as `curl`, `ssh`, `ping`, etc.
+    * Build and test web applications
+
+13. **Shell Scripting**
+
+    * Bash
+    * Environment variables
+    * Pipes
+    * Redirection
+    * Loops
+    * Conditions
+    * Automation scripts
+
+14. **Linux Administration Practice**
+
+    * Users and groups
+    * File permissions
+    * Processes
+    * Services
+    * Package management
+    * Filesystems
+    * Networking
+
+### Simple Summary
+
+```text
+WSL
+│
+├── Linux Commands
+├── Linux Software
+├── Linux Programs
+├── Linux Servers
+├── Linux Networking
+├── Shell Scripting
+├── Development
+├── Windows ↔ Linux File Access
+├── Windows ↔ Linux Program Integration
+├── Multiple Linux Distros
+└── Docker Integration
+```
+
+**Best use for you:** WSL + Ubuntu is a great environment to practice Linux without replacing Windows.
